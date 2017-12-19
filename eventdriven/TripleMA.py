@@ -24,14 +24,15 @@ trade_config = {
     "remote.trade.password": "eyJhbGciOiJIUzI1NiJ9.eyJjcmVhdGVfdGltZSI6IjE1MTIwMjA0OTQyMzUiLCJpc3MiOiJhdXRoMCIsImlkIjoiMTM3OTgzODU3NjcifQ.xdH5gvprHEsn89tPuy8L5gj7AvhIef7ZjbpDyzc5uJ4"
 }
 
-result_dir_path = '../../output/double_ma'
+result_dir_path = '../../output/triple_ma'
 is_backtest = True
 
 
-class DoubleMaStrategy(EventDrivenStrategy):
+class TripleMaStrategy(EventDrivenStrategy):
     """"""
+
     def __init__(self):
-        super(DoubleMaStrategy, self).__init__()
+        super(TripleMaStrategy, self).__init__()
 
         # 标的
         self.symbol = ''
@@ -39,7 +40,8 @@ class DoubleMaStrategy(EventDrivenStrategy):
         # 快线和慢线周期
         self.fast_ma_len = 0
         self.slow_ma_len = 0
-        
+        self.live_ma_len = 0  # live k line, do not buy under it
+
         # 记录当前已经过的天数
         self.window_count = 0
         self.window = 0
@@ -47,7 +49,8 @@ class DoubleMaStrategy(EventDrivenStrategy):
         # 快线和慢线均值
         self.fast_ma = 0
         self.slow_ma = 0
-        
+        self.live_ma = 0
+
         # 固定长度的价格序列
         self.price_arr = None
 
@@ -57,12 +60,12 @@ class DoubleMaStrategy(EventDrivenStrategy):
         # 下单量乘数
         self.buy_size_unit = 1
         self.output = True
-    
+
     def init_from_config(self, props):
         """
         将props中的用户设置读入
         """
-        super(DoubleMaStrategy, self).init_from_config(props)
+        super(TripleMaStrategy, self).init_from_config(props)
         # 标的
         self.symbol = props.get('symbol')
 
@@ -72,8 +75,9 @@ class DoubleMaStrategy(EventDrivenStrategy):
         # 快线和慢线均值
         self.fast_ma_len = props.get('fast_ma_length')
         self.slow_ma_len = props.get('slow_ma_length')
+        self.live_ma_len = props.get('live_ma_length')
         self.window = self.slow_ma_len + 1
-        
+
         # 固定长度的价格序列
         self.price_arr = np.zeros(self.window)
 
@@ -90,27 +94,30 @@ class DoubleMaStrategy(EventDrivenStrategy):
         else:
             # 否则为bar类型，ref_price为bar的收盘价
             ref_price = quote.close
-            
-        task_id, msg = self.ctx.trade_api.place_order(quote.symbol, common.ORDER_ACTION.BUY, ref_price, self.buy_size_unit * size)
+
+        task_id, msg = self.ctx.trade_api.place_order(quote.symbol, common.ORDER_ACTION.BUY, ref_price,
+                                                      self.buy_size_unit * size)
 
         if (task_id is None) or (task_id == 0):
             print("place_order FAILED! msg = {}".format(msg))
-    
+
     def sell(self, quote, size=1):
         if isinstance(quote, Quote):
             ref_price = (quote.bidprice1 + quote.askprice1) / 2.0
         else:
             ref_price = quote.close
-    
-        task_id, msg = self.ctx.trade_api.place_order(quote.symbol, common.ORDER_ACTION.SHORT, ref_price, self.buy_size_unit * size)
+
+        task_id, msg = self.ctx.trade_api.place_order(quote.symbol, common.ORDER_ACTION.SHORT, ref_price,
+                                                      self.buy_size_unit * size)
 
         if (task_id is None) or (task_id == 0):
             print("place_order FAILED! msg = {}".format(msg))
-    
+
     """
     'on_tick' 接收单个quote变量，而'on_bar'接收多个quote组成的dictionary
     'on_tick' 是在tick级回测和实盘/仿真交易中使用，而'on_bar'是在bar回测中使用
     """
+
     def on_tick(self, quote):
         pass
 
@@ -145,9 +152,14 @@ class DoubleMaStrategy(EventDrivenStrategy):
         # 计算当前的快线/慢线均值
         self.fast_ma = np.mean(self.price_arr[-self.fast_ma_len:])
         self.slow_ma = np.mean(self.price_arr[-self.slow_ma_len:])
+        self.live_ma = np.mean(self.price_arr[-self.live_ma_len:])
 
         print(quote)
-        print("Fast MA = {:.2f}     Slow MA = {:.2f}".format(self.fast_ma, self.slow_ma))
+        print("Fast MA = {:.2f}    Slow MA = {:.2f}    Live MA = {:.2f}".format(self.fast_ma, self.slow_ma, self.live_ma))
+
+        # 如果快线跟慢线都在生命线下，就不交易
+        if (self.fast_ma < self.live_ma) and (self.slow_ma < self.live_ma):
+            return
 
         # 交易逻辑：当快线向上穿越慢线且当前没有持仓，则买入100股；当快线向下穿越慢线且当前有持仓，则平仓
         if self.fast_ma > self.slow_ma:
@@ -172,40 +184,44 @@ def run_strategy():
         """
         回测模式
         """
-        props = {#"symbol": '600519.SH',
-                 "symbol": '002050.SZ',
-                 # "benchmark": '000300.SH',
-                 "start_date": 20170101,
-                 "end_date": 20171219,
-                 "fast_ma_length": 3,
-                 "slow_ma_length": 8,
-                 "bar_type": "1d",  # '1d'
-                 "init_balance": 50000}
+        props = {
+            "symbol": '600519.SH',
+            # "symbol": '002050.SZ',
+            # "benchmark": '002050.SZ',
+            "benchmark": '000300.SH',
+            "start_date": 20170101,
+            "end_date": 20171219,
+            "fast_ma_length": 3,
+            "slow_ma_length": 8,
+            "live_ma_length": 34,
+            "bar_type": "1d",  # '1d'
+            "init_balance": 50000}
 
         tapi = BacktestTradeApi()
         ins = EventBacktestInstance()
-        
+
     else:
         """
         实盘/仿真模式
         """
         props = {'symbol': '600519.SH',
-                 "fast_ma_length": 5,
-                 "slow_ma_length": 15,
+                 "fast_ma_length": 3,
+                 "slow_ma_length": 5,
+                 "live_ma_length": 34,
                  'strategy.no': 1062}
         tapi = RealTimeTradeApi(trade_config)
         ins = EventLiveTradeInstance()
 
     props.update(data_config)
     props.update(trade_config)
-    
+
     ds = RemoteDataService()
-    strat = DoubleMaStrategy()
+    strat = TripleMaStrategy()
     pm = PortfolioManager()
-    
+
     context = model.Context(data_api=ds, trade_api=tapi, instance=ins,
                             strategy=strat, pm=pm)
-    
+
     ins.init_from_config(props)
     if not is_backtest:
         ds.subscribe(props['symbol'])
@@ -218,12 +234,12 @@ def run_strategy():
 
 def analyze():
     ta = ana.EventAnalyzer()
-    
+
     ds = RemoteDataService()
     ds.init_from_config(data_config)
-    
+
     ta.initialize(data_server_=ds, file_folder=result_dir_path)
-    
+
     ta.do_analyze(result_dir=result_dir_path, selected_sec=[])
 
 

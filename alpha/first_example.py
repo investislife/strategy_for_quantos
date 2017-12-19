@@ -44,7 +44,7 @@ def save_data():
 
     """
     dataview_props = {# Start and end date of back-test
-                      'start_date': 20170101, 'end_date': 20171218,
+                      'start_date': 20170101, 'end_date': 20171219,
                       # Investment universe and performance benchmark
                       'universe': UNIVERSE, 'benchmark': '000300.SH',
                       # Data fields that we need
