@@ -26,7 +26,7 @@ dataview_dir_path = '../../output/wine_industry_momentum/dataview'
 backtest_result_dir_path = '../../output/wine_industry_momentum'
 
 BENCHMARK = '399997.SZ'
-is_backtest = False
+is_backtest = True
 
 
 def test_save_dataview():

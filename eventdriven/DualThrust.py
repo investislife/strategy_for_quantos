@@ -14,10 +14,21 @@ from jaqs.trade import PortfolioManager
 import jaqs.trade.analyze as ana
 import jaqs.util as jutil
 
-from config_path import DATA_CONFIG_PATH, TRADE_CONFIG_PATH
-data_config = jutil.read_json(DATA_CONFIG_PATH)
-trade_config = jutil.read_json(TRADE_CONFIG_PATH)
+# from config_path import DATA_CONFIG_PATH, TRADE_CONFIG_PATH
+# data_config = jutil.read_json(DATA_CONFIG_PATH)
+# trade_config = jutil.read_json(TRADE_CONFIG_PATH)
 
+data_config = {
+    "remote.data.address": "tcp://data.tushare.org:8910",
+    # "remote.data.address": "tcp://45.79.104.166:8910",
+    "remote.data.username": "13798385767",
+    "remote.data.password": "eyJhbGciOiJIUzI1NiJ9.eyJjcmVhdGVfdGltZSI6IjE1MTIwMjA0OTQyMzUiLCJpc3MiOiJhdXRoMCIsImlkIjoiMTM3OTgzODU3NjcifQ.xdH5gvprHEsn89tPuy8L5gj7AvhIef7ZjbpDyzc5uJ4"
+}
+trade_config = {
+    "remote.trade.address": "tcp://gw.quantos.org:8901",
+    "remote.trade.username": "13798385767",
+    "remote.trade.password": "eyJhbGciOiJIUzI1NiJ9.eyJjcmVhdGVfdGltZSI6IjE1MTIwMjA0OTQyMzUiLCJpc3MiOiJhdXRoMCIsImlkIjoiMTM3OTgzODU3NjcifQ.xdH5gvprHEsn89tPuy8L5gj7AvhIef7ZjbpDyzc5uJ4"
+}
 result_dir_path = '../../output/dual_thrust'
 
 
@@ -85,10 +96,12 @@ class DualThrust(EventDrivenStrategy):
         pass
 
     def buy(self, quote, price, size):
-        self.ctx.trade_api.place_order(quote.symbol, 'Buy', price, size)
+        # self.ctx.trade_api.place_order(quote.symbol, 'Buy', price, size)
+        self.ctx.trade_api.place_order(quote.symbol, 'Sell', price, size)
 
     def sell(self, quote, price, size):
-        self.ctx.trade_api.place_order(quote.symbol, 'Sell', price, size)
+        # self.ctx.trade_api.place_order(quote.symbol, 'Sell', price, size)
+        self.ctx.trade_api.place_order(quote.symbol, 'Buy', price, size)
 
     def on_bar(self, quote):
         if self.bufferCount <= self.bufferSize:
@@ -142,12 +155,16 @@ class DualThrust(EventDrivenStrategy):
 
 
 props = {
-    "symbol": "rb1710.SHF",
-    "start_date": 20170510,
-    "end_date": 20170830,
+    # "symbol": "rb1710.SHF",
+    # "symbol": "002050.SZ",
+    "symbol": "002027.SZ",
+    'benchmark': '000300.SH',
+    # 'benchmark': '002050.SZ',
+    "start_date": 20170101,
+    "end_date": 20171130,
     "buffersize": 7,
-    "k1": 0.2,
-    "k2": 0.2,
+    "k1": 0.7,# 0.2 -> 0.5
+    "k2": 0.6,# 0.2 -> 0.5
     "bar_type": "1M",
     "init_balance": 3e4,
     "commission_rate": 0.0

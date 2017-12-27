@@ -2,10 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0f8ef0cd-4c6d-4d9b-877e-bb1ee544ad5c" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/eventdriven/TripleMA.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/personal/find_the_best_etf.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/personal/test_dataapi.py" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/alpha/first_example.py" afterPath="$PROJECT_DIR$/alpha/first_example.py" />
-      <change beforePath="$PROJECT_DIR$/eventdriven/DoubleMA.py" afterPath="$PROJECT_DIR$/eventdriven/DoubleMA.py" />
+      <change beforePath="$PROJECT_DIR$/alpha/wine_industry_momentum.py" afterPath="$PROJECT_DIR$/alpha/wine_industry_momentum.py" />
+      <change beforePath="$PROJECT_DIR$/eventdriven/DualThrust.py" afterPath="$PROJECT_DIR$/eventdriven/DualThrust.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -16,10 +18,11 @@
   </component>
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/example$SH_600201.coverage" NAME="SH_600201 Coverage Results" MODIFIED="1512881886174" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/alpha" />
-    <SUITE FILE_PATH="coverage/strategy_for_quantos$first_example.coverage" NAME="first_example Coverage Results" MODIFIED="1513655747664" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/alpha" />
     <SUITE FILE_PATH="coverage/strategy_for_quantos$DoubleMA.coverage" NAME="DoubleMA Coverage Results" MODIFIED="1513659889615" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/eventdriven" />
+    <SUITE FILE_PATH="coverage/strategy_for_quantos$first_example.coverage" NAME="first_example Coverage Results" MODIFIED="1514346122884" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/alpha" />
     <SUITE FILE_PATH="coverage/example$select_stocks_industry_head.coverage" NAME="select_stocks_industry_head Coverage Results" MODIFIED="1513261273285" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/alpha" />
     <SUITE FILE_PATH="coverage/example$first_example.coverage" NAME="first_example Coverage Results" MODIFIED="1513577825049" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/alpha" />
+    <SUITE FILE_PATH="coverage/strategy_for_quantos$find_the_best_etf.coverage" NAME="find_the_best_etf Coverage Results" MODIFIED="1514392763384" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/personal" />
     <SUITE FILE_PATH="coverage/example$select_stocks_pe_profit.coverage" NAME="select_stocks_pe_profit Coverage Results" MODIFIED="1512883524668" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/alpha" />
   </component>
   <component name="FileEditorManager">
@@ -27,76 +30,40 @@
       <file leaf-file-name="first_example.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/alpha/first_example.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-247">
-              <caret line="36" column="22" lean-forward="true" selection-start-line="36" selection-start-column="22" selection-end-line="36" selection-end-column="22" />
-              <folding>
-                <element signature="e#145#227#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="config_path.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/alpha/config_path.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="138">
-              <caret line="7" column="63" lean-forward="false" selection-start-line="7" selection-start-column="63" selection-end-line="7" selection-end-column="63" />
+            <state relative-caret-position="40">
+              <caret line="12" column="25" lean-forward="true" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="25" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="selection_three_yang.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/personal/selection_three_yang.py">
+      <file leaf-file-name="data_api.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/DataApi/data_api.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+            <state relative-caret-position="3049">
+              <caret line="302" column="4" lean-forward="true" selection-start-line="302" selection-start-column="4" selection-end-line="302" selection-end-column="4" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DoubleMA.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/eventdriven/DoubleMA.py">
+      <file leaf-file-name="test_dataapi.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/personal/test_dataapi.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="157">
-              <caret line="171" column="11" lean-forward="true" selection-start-line="171" selection-start-column="11" selection-end-line="171" selection-end-column="11" />
-              <folding>
-                <element signature="e#19#101#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TripleMA.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/eventdriven/TripleMA.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="318">
-              <caret line="194" column="31" lean-forward="false" selection-start-line="194" selection-start-column="31" selection-end-line="194" selection-end-column="31" />
-              <folding>
-                <element signature="e#19#101#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="backtest.py" pinned="false" current-in-tab="false">
-        <entry file="file://D:/devtools/Anaconda3/Lib/site-packages/jaqs-0.6.7-py3.6.egg/jaqs/trade/backtest.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="10026">
-              <caret line="532" column="8" lean-forward="false" selection-start-line="532" selection-start-column="8" selection-end-line="532" selection-end-column="8" />
+            <state relative-caret-position="115">
+              <caret line="5" column="2" lean-forward="false" selection-start-line="5" selection-start-column="2" selection-end-line="5" selection-end-column="51" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="medianRet.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/personal/medianRet.py">
+      <file leaf-file-name="find_the_best_etf.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/personal/find_the_best_etf.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="782">
-              <caret line="37" column="0" lean-forward="false" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
+            <state relative-caret-position="1413">
+              <caret line="203" column="29" lean-forward="false" selection-start-line="203" selection-start-column="16" selection-end-line="203" selection-end-column="29" />
               <folding>
-                <element signature="e#1#52#0" expanded="true" />
+                <element signature="e#328#410#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -121,6 +88,10 @@
       <find>double</find>
       <find>slow_ma_len</find>
       <find>slow</find>
+      <find>data_config</find>
+      <find>query</find>
+      <find>print</find>
+      <find>get_fundlist</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -135,9 +106,13 @@
         <option value="$PROJECT_DIR$/personal/selection_three_crow.py" />
         <option value="$PROJECT_DIR$/personal/selection_three_yang.py" />
         <option value="$PROJECT_DIR$/alpha/config_path.py" />
-        <option value="$PROJECT_DIR$/alpha/first_example.py" />
-        <option value="$PROJECT_DIR$/eventdriven/DoubleMA.py" />
         <option value="$PROJECT_DIR$/eventdriven/TripleMA.py" />
+        <option value="$PROJECT_DIR$/eventdriven/DoubleMA.py" />
+        <option value="$PROJECT_DIR$/personal/test_dataapi.py" />
+        <option value="$PROJECT_DIR$/eventdriven/DualThrust.py" />
+        <option value="$PROJECT_DIR$/alpha/wine_industry_momentum.py" />
+        <option value="$PROJECT_DIR$/alpha/first_example.py" />
+        <option value="$PROJECT_DIR$/personal/find_the_best_etf.py" />
       </list>
     </option>
   </component>
@@ -147,10 +122,10 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="260" />
-    <option name="y" value="20" />
-    <option name="width" value="1938" />
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="556" />
+    <option name="y" value="44" />
+    <option name="width" value="1743" />
     <option name="height" value="1048" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
@@ -198,25 +173,25 @@
             <path>
               <item name="strategy_for_quantos" type="b2602c69:ProjectViewProjectNode" />
               <item name="strategy_for_quantos" type="462c0819:PsiDirectoryNode" />
-              <item name="alpha" type="462c0819:PsiDirectoryNode" />
+              <item name="eventdriven" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="strategy_for_quantos" type="b2602c69:ProjectViewProjectNode" />
               <item name="strategy_for_quantos" type="462c0819:PsiDirectoryNode" />
-              <item name="eventdriven" type="462c0819:PsiDirectoryNode" />
+              <item name="personal" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../vnpy/examples" />
     <property name="two.files.diff.last.used.file" value="$PROJECT_DIR$/alpha/first_example.py" />
   </component>
   <component name="RunDashboard">
@@ -231,8 +206,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.TripleMA">
-    <configuration name="DoubleMA" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python.find_the_best_etf">
+    <configuration name="DualThrust" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -246,27 +221,7 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="example" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/eventdriven/DoubleMA.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="true" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-    </configuration>
-    <configuration name="TripleMA" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-        <env name="PYDEVD_LOAD_VALUES_ASYNC" value="True" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/eventdriven" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="example" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/eventdriven/TripleMA.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/eventdriven/DualThrust.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="true" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -291,6 +246,26 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
+    <configuration name="find_the_best_etf" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+        <env name="PYDEVD_LOAD_VALUES_ASYNC" value="True" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/personal" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="example" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/personal/find_the_best_etf.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
     <configuration name="first_example" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -310,7 +285,7 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
-    <configuration name="selection_three_crow" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="test_dataapi" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -324,13 +299,13 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="example" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/personal/selection_three_crow.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/personal/test_dataapi.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="true" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
-    <configuration name="selection_three_yang" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="wine_industry_momentum" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -338,13 +313,13 @@
         <env name="PYDEVD_LOAD_VALUES_ASYNC" value="True" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/personal" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/alpha" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="example" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/personal/selection_three_yang.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/alpha/wine_industry_momentum.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="true" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -352,18 +327,18 @@
     </configuration>
     <list size="5">
       <item index="0" class="java.lang.String" itemvalue="Python.first_example" />
-      <item index="1" class="java.lang.String" itemvalue="Python.selection_three_crow" />
-      <item index="2" class="java.lang.String" itemvalue="Python.selection_three_yang" />
-      <item index="3" class="java.lang.String" itemvalue="Python.DoubleMA" />
-      <item index="4" class="java.lang.String" itemvalue="Python.TripleMA" />
+      <item index="1" class="java.lang.String" itemvalue="Python.DualThrust" />
+      <item index="2" class="java.lang.String" itemvalue="Python.test_dataapi" />
+      <item index="3" class="java.lang.String" itemvalue="Python.wine_industry_momentum" />
+      <item index="4" class="java.lang.String" itemvalue="Python.find_the_best_etf" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.TripleMA" />
-        <item index="1" class="java.lang.String" itemvalue="Python.DoubleMA" />
+        <item index="0" class="java.lang.String" itemvalue="Python.find_the_best_etf" />
+        <item index="1" class="java.lang.String" itemvalue="Python.wine_industry_momentum" />
         <item index="2" class="java.lang.String" itemvalue="Python.first_example" />
-        <item index="3" class="java.lang.String" itemvalue="Python.selection_three_yang" />
-        <item index="4" class="java.lang.String" itemvalue="Python.selection_three_crow" />
+        <item index="3" class="java.lang.String" itemvalue="Python.DualThrust" />
+        <item index="4" class="java.lang.String" itemvalue="Python.test_dataapi" />
       </list>
     </recent_temporary>
   </component>
@@ -381,25 +356,33 @@
       <option name="presentableId" value="Default" />
       <updated>1512880050312</updated>
     </task>
+    <task id="LOCAL-00001" summary="3，5，34，选股">
+      <created>1513671631981</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1513671631981</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
+    <frame x="-9" y="-9" width="1938" height="1048" extended-state="7" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.051311288" sideWeight="0.5083333" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Documentation" active="true" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18830472" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" x="0" y="0" width="434" height="848" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.36259976" sideWeight="0.49166667" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22693133" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" x="0" y="0" width="434" height="848" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32928178" sideWeight="0.49791667" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27480045" sideWeight="0.49583334" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.34435576" sideWeight="0.49166667" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295325" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19474249" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19688842" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="SciView" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" show_stripe_button="false" weight="0.152897" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" x="1035" y="256" width="781" height="527" />
+      <window_info id="SciView" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" show_stripe_button="false" weight="0.152897" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" x="222" y="38" width="1570" height="901" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.45496008" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.49486887" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -407,7 +390,7 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Concurrent Activities Diagram" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32928178" sideWeight="0.49791667" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Concurrent Activities Diagram" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32839224" sideWeight="0.49791667" order="7" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -446,6 +429,8 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/.." />
     </ignored-roots>
+    <MESSAGE value="3，5，34，选股" />
+    <option name="LAST_COMMIT_MESSAGE" value="3，5，34，选股" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -460,13 +445,27 @@
           <line>152</line>
           <option name="timeStamp" value="6" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/personal/find_the_best_etf.py</url>
+          <line>132</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/personal/find_the_best_etf.py</url>
+          <line>226</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="7" />
+      <option name="time" value="10" />
     </breakpoint-manager>
-    <watches-manager />
+    <watches-manager>
+      <configuration name="PythonConfigurationType">
+        <watch expression="df" />
+      </configuration>
+    </watches-manager>
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="evaluateExpression">
@@ -488,34 +487,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/alpha/select_stocks_pe_profit.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/alpha/select_stocks_industry_head.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/alpha/single_factor_weight.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/alpha/wine_industry_momentum.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="28" column="19" lean-forward="false" selection-start-line="28" selection-start-column="19" selection-end-line="28" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/eventdriven/DoubleMA.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -534,9 +505,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="621">
           <caret line="36" column="18" lean-forward="false" selection-start-line="36" selection-start-column="12" selection-end-line="36" selection-end-column="18" />
-          <folding>
-            <element signature="e#145#227#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -600,9 +569,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="621">
           <caret line="36" column="18" lean-forward="false" selection-start-line="36" selection-start-column="12" selection-end-line="36" selection-end-column="18" />
-          <folding>
-            <element signature="e#145#227#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -712,13 +679,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/alpha/wine_industry_momentum.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1673">
-          <caret line="28" column="19" lean-forward="false" selection-start-line="28" selection-start-column="19" selection-end-line="28" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/alpha/select_stocks_industry_head.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-693">
@@ -748,41 +708,80 @@
         <state relative-caret-position="782">
           <caret line="37" column="0" lean-forward="false" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
           <folding>
-            <element signature="e#1#52#0" expanded="true" />
+            <element signature="e#1#52#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://D:/devtools/Anaconda3/Lib/site-packages/jaqs-0.6.7-py3.6.egg/jaqs/data/dataview.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="282">
-          <caret line="1005" column="8" lean-forward="false" selection-start-line="1005" selection-start-column="8" selection-end-line="1005" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://D:/devtools/Anaconda3/Lib/site-packages/jaqs-0.6.7-py3.6.egg/jaqs/data/dataview.py" />
     <entry file="file://$PROJECT_DIR$/personal/selection_three_crow.py" />
     <entry file="file://$PROJECT_DIR$/eventdriven/config_path.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://D:/devtools/Anaconda3/Lib/site-packages/jaqs-0.6.7-py3.6.egg/jaqs/trade/strategy.py">
+    <entry file="file://D:/devtools/Anaconda3/Lib/site-packages/jaqs-0.6.7-py3.6.egg/jaqs/trade/strategy.py" />
+    <entry file="file://D:/devtools/Anaconda3/Lib/site-packages/jaqs-0.6.7-py3.6.egg/jaqs/trade/backtest.py" />
+    <entry file="file://$PROJECT_DIR$/eventdriven/TripleMA.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="365" column="7" lean-forward="true" selection-start-line="365" selection-start-column="7" selection-end-line="365" selection-end-column="7" />
-          <folding />
+        <state relative-caret-position="4462">
+          <caret line="194" column="31" lean-forward="false" selection-start-line="194" selection-start-column="31" selection-end-line="194" selection-end-column="31" />
+          <folding>
+            <element signature="e#19#101#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../vnpy/examples/VnTrader/run.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/personal/selection_three_yang.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+        <state relative-caret-position="92">
+          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/alpha/wine_industry_momentum.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="619">
+          <caret line="28" column="18" lean-forward="false" selection-start-line="28" selection-start-column="18" selection-end-line="28" selection-end-column="18" />
+          <folding>
+            <element signature="e#80#117#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/alpha/first_example.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="40">
+          <caret line="12" column="25" lean-forward="true" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/personal/test_dataapi.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="115">
+          <caret line="5" column="2" lean-forward="false" selection-start-line="5" selection-start-column="2" selection-end-line="5" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/eventdriven/DoubleMA.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="473">
+          <caret line="43" column="29" lean-forward="false" selection-start-line="43" selection-start-column="29" selection-end-line="43" selection-end-column="29" />
+          <folding>
+            <element signature="e#19#101#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -796,49 +795,29 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/eventdriven/DualThrust.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3145">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="327">
+          <caret line="27" column="3" lean-forward="false" selection-start-line="27" selection-start-column="3" selection-end-line="27" selection-end-column="56" />
           <folding>
-            <element signature="e#19#56#0" expanded="false" />
+            <element signature="e#19#56#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/alpha/first_example.py">
+    <entry file="file://$PROJECT_DIR$/personal/find_the_best_etf.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-247">
-          <caret line="36" column="22" lean-forward="true" selection-start-line="36" selection-start-column="22" selection-end-line="36" selection-end-column="22" />
+        <state relative-caret-position="1413">
+          <caret line="203" column="29" lean-forward="false" selection-start-line="203" selection-start-column="16" selection-end-line="203" selection-end-column="29" />
           <folding>
-            <element signature="e#145#227#0" expanded="true" />
+            <element signature="e#328#410#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://D:/devtools/Anaconda3/Lib/site-packages/jaqs-0.6.7-py3.6.egg/jaqs/trade/backtest.py">
+    <entry file="file://$PROJECT_DIR$/DataApi/data_api.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="10026">
-          <caret line="532" column="8" lean-forward="false" selection-start-line="532" selection-start-column="8" selection-end-line="532" selection-end-column="8" />
+        <state relative-caret-position="3049">
+          <caret line="302" column="4" lean-forward="true" selection-start-line="302" selection-start-column="4" selection-end-line="302" selection-end-column="4" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/eventdriven/DoubleMA.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="157">
-          <caret line="171" column="11" lean-forward="true" selection-start-line="171" selection-start-column="11" selection-end-line="171" selection-end-column="11" />
-          <folding>
-            <element signature="e#19#101#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/eventdriven/TripleMA.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="318">
-          <caret line="194" column="31" lean-forward="false" selection-start-line="194" selection-start-column="31" selection-end-line="194" selection-end-column="31" />
-          <folding>
-            <element signature="e#19#101#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
