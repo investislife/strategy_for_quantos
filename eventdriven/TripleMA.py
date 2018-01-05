@@ -170,6 +170,21 @@ class TripleMaStrategy(EventDrivenStrategy):
             if self.pos > 0:
                 self.sell(quote, self.pos)
 
+        # # 如果快线跟慢线都在生命线上，就买
+        # if (self.fast_ma >= self.live_ma) and (self.slow_ma >= self.live_ma):
+        #     # 交易逻辑：当快线向上穿越慢线且当前没有持仓，则买入100股；当快线向下穿越慢线且当前有持仓，则平仓
+        #     if self.fast_ma > self.slow_ma:
+        #         if self.pos == 0:
+        #             self.buy(quote, 100)
+        #     return
+        #
+        # # 如果快线跟慢线都在生命线下，就不交易 or 只卖
+        # if (self.fast_ma < self.live_ma) and (self.slow_ma < self.live_ma):
+        #     if self.fast_ma < self.slow_ma:
+        #         if self.pos > 0:
+        #             self.sell(quote, self.pos)
+        #     return
+
     def on_trade(self, ind):
         """
         交易完成后通过self.ctx.pm.get_pos得到最新仓位并更新self.pos
@@ -180,6 +195,11 @@ class TripleMaStrategy(EventDrivenStrategy):
 
 
 def run_strategy():
+    '''
+    universe可以自己定义吗，就是从我筛选的一组股票里面挑选
+    把universe改成symbol，然后值设置成一系列代码的字符串，用逗号隔开
+    :return:
+    '''
     if is_backtest:
         """
         回测模式
@@ -239,7 +259,6 @@ def analyze():
     ds.init_from_config(data_config)
 
     ta.initialize(data_server_=ds, file_folder=result_dir_path)
-
     ta.do_analyze(result_dir=result_dir_path, selected_sec=[])
 
 

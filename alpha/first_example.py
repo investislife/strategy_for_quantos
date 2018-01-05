@@ -183,7 +183,7 @@ if __name__ == "__main__":
         analyze_backtest_results()
     else:
         #save_data()
-        while True:
-            import time
-            time.sleep(10)
+        # while True:
+        #     import time
+        #     time.sleep(10)
             do_livetrade()
