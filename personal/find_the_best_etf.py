@@ -46,6 +46,7 @@ UNIVERSE = '000807.SH'
 def get_fundlist(api, invest_type, invest_style):
     '''
     取出符合条件的股票型基金中的指数增强基金
+    type，style -- 区分不同的基金
     :param api:
     :param invest_type:
     :param invest_style:
