@@ -54,13 +54,13 @@ def get_fundlist(api, invest_type, invest_style):
     '''
     df, msg = api.query(
         view="lb.mfInfo",
-        fields="invest_type,invest_style,status",
+        fields="name,invest_type,invest_style,status",
         filter="",
         data_format='pandas'
     )
     # print(df, msg)
     df = df[(df['invest_type'] == invest_type)
-            & (df['invest_style'] == invest_style)
+            # & (df['invest_style'] == invest_style)
             & (df['status'] == 101001000)
             & (df['name'].apply(lambda s:'A' not in s))
         ]
