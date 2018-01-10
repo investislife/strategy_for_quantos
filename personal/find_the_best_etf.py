@@ -18,7 +18,8 @@ ETF: 指数增强型基金并非纯指数基金，是指基金在进行指数化
 """
 from __future__ import print_function, unicode_literals, division, absolute_import
 
-from DataApi import DataApi
+# from DataApi import DataApi
+from jaqs.data import DataApi
 import numpy as np
 import pandas as pd
 import time
@@ -225,13 +226,14 @@ if __name__ == "__main__":
                            risk_metrics['Maximum Drawdown (%)'],
                            risk_metrics['Maximum Drawdown start'],
                            risk_metrics['Maximum Drawdown end']))
-        labels = ['symbol', 'index', 'AnnualReturn', 'AnnualVolatility', 'SharpeRatio',
-                  'StratCumReturn', 'BenchCumReturn', 'Beta',
-                  'MaximumDrawdown', 'MaximumDrawdownStart', 'MaximumDrawdownEnd']
-        df = pd.DataFrame.from_records(indicators, columns=labels)
-        df.describe()
-        df = df.sort_values('SharpeRatio')
-        df.sort_values('AnnualReturn')
 
-        str_path = "find_the_best_etf.csv"
-        df.to_csv(str_path, )
+    labels = ['symbol', 'index', 'AnnualReturn', 'AnnualVolatility', 'SharpeRatio',
+              'StratCumReturn', 'BenchCumReturn', 'Beta',
+              'MaximumDrawdown', 'MaximumDrawdownStart', 'MaximumDrawdownEnd']
+    df = pd.DataFrame.from_records(indicators, columns=labels)
+    df.describe()
+    df = df.sort_values('SharpeRatio')
+    df.sort_values('AnnualReturn')
+
+    str_path = "find_the_best_etf.csv"
+    df.to_csv(str_path, )
