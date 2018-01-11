@@ -64,7 +64,7 @@ def get_fundlist(api, invest_type, invest_style):
     )
     # print(df, msg)
     df = df[(df['invest_type'] == invest_type)
-            # & (df['invest_style'] == invest_style)
+            & (df['invest_style'] == invest_style)
             & (df['status'] == 101001000)
             & (df['name'].apply(lambda s:'A' not in s))
         ]
@@ -204,8 +204,8 @@ if __name__ == "__main__":
     df = get_fundlist(api, u'股票型', u'增强指数型')
     symbols = ",".join(df['symbol'])
 
-    start_data = 20161230
-    curr_data = 20171227
+    start_data = 20170101
+    curr_data = 20180110
     index_map = get_index_map(api, symbols, start_data)
     # print(index_map)
 
@@ -215,8 +215,11 @@ if __name__ == "__main__":
         if performance_metrics is None:
             continue
 
+        df_temp, msg_temp = api.query(view="lb.mfInfo", fields='name', filter="symbol=" + symbol)
+        name = df_temp.loc[0]['name']
         indicators.append((symbol,
                            index,
+                           name,
                            performance_metrics['Annual Return (%)'],
                            performance_metrics['Annual Volatility (%)'],
                            performance_metrics['Sharpe Ratio'],
@@ -227,13 +230,13 @@ if __name__ == "__main__":
                            risk_metrics['Maximum Drawdown start'],
                            risk_metrics['Maximum Drawdown end']))
 
-    labels = ['symbol', 'index', 'AnnualReturn', 'AnnualVolatility', 'SharpeRatio',
+    labels = ['symbol', 'index', 'name', 'AnnualReturn', 'AnnualVolatility', 'SharpeRatio',
               'StratCumReturn', 'BenchCumReturn', 'Beta',
               'MaximumDrawdown', 'MaximumDrawdownStart', 'MaximumDrawdownEnd']
     df = pd.DataFrame.from_records(indicators, columns=labels)
     df.describe()
-    df = df.sort_values('SharpeRatio')
-    df.sort_values('AnnualReturn')
+    df = df.sort_values('SharpeRatio', ascending=False)
+    df.sort_values('AnnualReturn', ascending=False)
 
     str_path = "find_the_best_etf.csv"
     df.to_csv(str_path, )
